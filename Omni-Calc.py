@@ -63,14 +63,14 @@ while vmntis == 1:
         print (dhoursr,"hours", dminutesr,"Minutes " ,dsecondsr,"Seconds")
     if calc_choice == "tax" or calc_choice == "sales tax" or calc_choice == "stx":
         print ("Welcome To Henri's Sales Tax Calculator")
-        tstate = input ("What state do you live in?")
+        tstate = input("What state do you live in?")
         if tstate == "MN" or "mn":
             price_mn = float (input ("please input the price of the item(s)"))
             mntax = price_mn * 0.06875
             mntotal = price_mn + mntax
             mntotalrnd = round(mntotal,2)
             print (mntotalrnd)
-        if tstate == "NY" or "mn":
+        if tstate == "NY" or "ny":
             price_ny = float (input ("please input the price of the item(s)"))
             nytax = price_ny * 0.08875
             nytotal = price_ny + nytax
@@ -106,8 +106,15 @@ while vmntis == 1:
         pa_2 = pa**2
         pb_2 = pb**2
         pc_2 = pa_2 + pb_2
-        pc = math.sqrt(c_2)
+        pc = math.sqrt(pc_2)
         print(pc)
+    if calc_choice == "pythagorean theorem reverse" or calc_choice == "ptr":
+        prb = float(input("please enter the length of leg b"))
+        prc = float(input("please enter the length of the hypotenuse"))
+        prb2 = prb**2
+        prc2 = prc**2
+        pra = math.sqrt(prc2-prb2)
+        print(pra)
     if calc_choice == "geometric sequence" or calc_choice == "geo seq" or calc_choice == "gs":
         gn = int(input ('please enter the part of the sequence you are trying to find'))
         gr_raw1 = int(input ('please enter the first number in the sequence'))
