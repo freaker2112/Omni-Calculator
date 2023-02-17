@@ -141,4 +141,3 @@ while vmntis == 1:
         print (bchours, " Hours, ", bcminutes, " Minutes")
     if calc_choice == "help":
         print("Calculators: division;'/', addition;'+', subtraction;'-', multiplication;'*', download time;'dt', pythagorean theorem;'pt', binge calculator;'bc', free living;'flc', free living reverse;'flr', geometric sequence;'gs', scientific notation;'scin', sales tax;'stx', arithmetic sequence;'asq', time dialation;'td'")
-
