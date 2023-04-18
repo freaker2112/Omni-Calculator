@@ -101,13 +101,28 @@ while vmntis == 1:
                 ans21 = float(input("please enter your number"))
                 print(format(ans21, "10.2E"))
     if calc_choice == "pythagorean theorem" or calc_choice == "pythag" or calc_choice == "pt":
-        pa = float(input("please enter the length of leg 1"))
-        pb = float(input("please enter the length of leg 2"))
+        print("input 0 for the length that you are trying to find")
+        pa = float(input("please enter the length of a"))
+        pb = float(input("please enter the length of b"))
+        pc = float(input("please enter the length of c"))
+
         pa_2 = pa**2
         pb_2 = pb**2
-        pc_2 = pa_2 + pb_2
-        pc = math.sqrt(pc_2)
-        print(pc)
+        pc_2 = pc**2
+
+        if pa == 0:
+           pa_3 = pc_2 - pb_2
+           pa = math.sqrt(pa_3)
+        if pb == 0:
+           pb_3 = pc_2 - pa_2
+           pb = math.sqrt(pb_3)
+        if pc == 0:
+            pc_3 = pa_2 + pb_2
+            pc = math.sqrt(pc_3)
+        print("a = ", pa, " b = ", pb, " c = ", pc)
+        #pc_2 = pa_2 + pb_2
+        #pc = math.sqrt(pc_2)
+        #print(pc)
     if calc_choice == "pythagorean theorem reverse" or calc_choice == "ptr":
         prb = float(input("please enter the length of leg b"))
         prc = float(input("please enter the length of the hypotenuse"))
@@ -146,5 +161,31 @@ while vmntis == 1:
         bchours = bcrawtime // 60
         bcminutes = bcrawtime % 60
         print (bchours, " Hours, ", bcminutes, " Minutes")
+    if calc_choice == "trig":
+        trig_tri_type = input("Is the triangle a right tringale?")
+        if trig_tri_type == "yes" or trig_tri_type == "y":
+            print("for the next few questions, if you dont know a measurement or that is the measurement you are trying to find, input 0")
+            TY_opp = int(input("input the opposite side length"))
+            TY_adj = int(input("input the adjacent side length"))
+            TY_hyp = int(input("input the hypotenuse length"))
+            if TY_hyp > 0 and TY_opp > 0:
+                TY_sinx = TY_opp / TY_hyp
+            if TY_hyp == 0 or TY_opp == 0:
+                TY_sinx = ("no data")
+            if TY_adj > 0 and TY_hyp > 0:
+                TY_cosx = TY_adj / TY_hyp
+            if TY_adj == 0 or TY_hyp == 0:
+                TY_cosx = ("no data")
+            if TY_opp > 0 and TY_adj > 0:
+                TY_tanx = TY_opp / TY_adj
+            if TY_opp == 0 or TY_adj == 0:
+                TY_tanx = ("no data")
+            print ("sin(x): ",TY_sinx, " cos(x): ", TY_cosx, " tan(x): ", TY_tanx)
+            
+    
+    
+    
+    
+    
     if calc_choice == "help":
         print("Calculators: division;'/', addition;'+', subtraction;'-', multiplication;'*', download time;'dt', pythagorean theorem;'pt', binge calculator;'bc', free living;'flc', free living reverse;'flr', geometric sequence;'gs', scientific notation;'scin', sales tax;'stx', arithmetic sequence;'asq', time dialation;'td'")
