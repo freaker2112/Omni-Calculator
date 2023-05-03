@@ -181,6 +181,22 @@ while vmntis == 1:
             if TY_opp == 0 or TY_adj == 0:
                 TY_tanx = ("no data")
             print ("sin(x): ",TY_sinx, " cos(x): ", TY_cosx, " tan(x): ", TY_tanx)
+    if calc_choice == "log":
+        logchoice = input("does this involve square roots?")
+        if logchoice == "yes":
+            baselogcomp = int(input("enter base"))
+            indexlogcomp = int(input("enter index"))
+            radicantlogcomp = float(input("enter radcand"))
+            if radicantlogcomp >= 10:
+                print("you are SOL")
+            if radicantlogcomp <= 9:
+                print ("1 / ", indexlogcomp)
+        if logchoice =="no":
+            baselogsim = int(input("enter base"))
+            valuelogsim = float(input("enter value (big number after log)"))
+            anslogsim = math.log(valuelogsim, baselogsim)
+            print (anslogsim)
+
             
     
     
